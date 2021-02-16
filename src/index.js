@@ -10,7 +10,6 @@ import AppImages from './apps/AppImages';
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
-    <SerchBox />
     <AppImages />
   </React.StrictMode>,
   document.getElementById('root')

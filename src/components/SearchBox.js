@@ -1,17 +1,26 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
-function SerchBox() {
-    const [serch, setSerch] = useState('null');
+class SerchBox extends Component{
+    serchRef = React.createRef();
 
-    return(
-        <div className="container">
+    serchImage = (e) => {
+        e.preventDefault();
+        const data = this.serchRef.current.value;
+
+        this.props.serchImg(data);
+    } 
+
+    render(){
+        return(
+            <div className="container">
             <h2>Search Image:</h2>
-            <form className="d-flex">
-                <input className="searchBox form-control" onChange={setSerch} type="search" placeholder="Search image" aria-label="Search" />
-                <button className="btn btn-primary button btn-sm" type="submit">Search</button>
+            <form className="d-flex" onSubmit={this.serchImage}>
+                <input ref={this.serchRef} className="searchBox form-control" type="search" placeholder="Search image" />
+                <input className="btn btn-dark button" type="submit" value="Serch" />
             </form>
         </div>
-    );
+        );
+    }
 }
 
 export default SerchBox;
