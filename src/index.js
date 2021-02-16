@@ -5,13 +5,13 @@ import reportWebVitals from './reportWebVitals';
 
 import Navbar from './components/Navbar';
 import SerchBox from './components/SearchBox';
-import ListImages from './components/ListImages';
+import AppImages from './apps/AppImages';
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
     <SerchBox />
-    <ListImages />
+    <AppImages />
   </React.StrictMode>,
   document.getElementById('root')
 );
