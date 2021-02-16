@@ -1,11 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 function ListImages({image, tags}) {
     return(
-        <div className="container">
-            <img src={image} />
-            <p>{tags}</p> 
+    <div className="box">
+        <img src={image} />
+        <div className="box-content">
+            <h3>Tags</h3>
+            <p>{tags}</p>
         </div>
+    </div>
     );
 }
 

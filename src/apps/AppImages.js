@@ -5,22 +5,28 @@ import GetImages from '../services/GetImages';
 
 function AppImages() {
     const [images, setImgaes] = useState([]);
-    
+
     function serchImg(serch) {
         GetImages({keyword: serch}).then(images => setImgaes(images));
     };
     
     return(
         <div className="container">
-            <SerchBox serchImg={serchImg} />
-            {
-                images.map(img => 
-                    <ListImages
+            <SerchBox 
+                query = {serchImg} 
+            />
+            <div className="container">
+                {
+                    images.map(img => 
+                    <ListImages 
                         key = {img.id}
-                        tags = {img.tags} 
                         image = {img.webformatURL}
-                    />)
-            }
+                        tags = {img.tags}
+                        
+                    /> )
+                }
+            </div>
+                
         </div>
     );
 }

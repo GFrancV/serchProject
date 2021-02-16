@@ -4,12 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import Navbar from './components/Navbar';
+import Jumbotron from './components/Jumbotron';
 import SerchBox from './components/SearchBox';
 import AppImages from './apps/AppImages';
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
+    <Jumbotron />
     <AppImages />
   </React.StrictMode>,
   document.getElementById('root')

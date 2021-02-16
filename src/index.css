@@ -14,6 +14,23 @@ h2 {
     color: #2b739c;
 }
 
+h3 {
+    color: #ffff;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.banner {
+    
+    text-align: center;
+    margin: 15px;
+}
+
+.banner h1 {
+    color: #2b739c;
+    font-size: 80px;
+}
+
 .text-default {
     text-decoration: none;
     color: #ffff;
@@ -29,3 +46,26 @@ h2 {
 .button {
     border-radius: 14px;
 }
+
+.box {
+    border-radius: 10px;
+    border: 2px solid #005b8f;
+    color: #ffff;
+    max-width: 300px;
+    float: left;
+    margin: 8px;
+    background-color: #24242c;
+}
+
+.box img {
+    text-align: center;
+    max-width: 296px;
+    border-radius: 8px;
+}
+
+.box-content {
+    padding-top: 6px;
+    padding-left: 10px;
+}
+
+

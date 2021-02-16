@@ -6,14 +6,12 @@ class SerchBox extends Component{
     serchImage = (e) => {
         e.preventDefault();
         const data = this.serchRef.current.value;
-
-        this.props.serchImg(data);
+        this.props.query(data);
     } 
 
     render(){
         return(
             <div className="container">
-            <h2>Search Image:</h2>
             <form className="d-flex" onSubmit={this.serchImage}>
                 <input ref={this.serchRef} className="searchBox form-control" type="search" placeholder="Search image" />
                 <input className="btn btn-dark button" type="submit" value="Serch" />
